@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rifki Profile</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        color: #ffffff;
+        font-family: 'Orbitron', sans-serif;
+      }
+
+      .navbar {
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+      }
+
+      .navbar-brand, .nav-link {
+        color: #00fff7 !important;
+      }
+
+      .profile {
+        padding: 120px 20px 60px;
+        background: linear-gradient(to right, #ff00cc, #333399);
+        text-align: center;
+      }
+
+      .profile h2 {
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .profile h4 {
+        color: #ffdf00;
+      }
+
+      .profileImage {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 4px solid #00fff7;
+        margin-bottom: 20px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .BIODATA, .projects, .contact {
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        padding: 40px 20px;
+        margin: 40px auto;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      }
+
+      .btn-danger, .btn-primary {
+        background-color: #ff0080;
+        border: none;
+        box-shadow: 0 0 10px #ff0080;
+      }
+
+      .card {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+
+      input, textarea {
+        background-color: #222;
+        color: #fff;
+        border: 1px solid #555;
+      }
+
+      input:focus, textarea:focus {
+        border-color: #ff0080;
+        box-shadow: 0 0 8px #ff0080;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Rifki Profile</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#biodata">Biodata</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Project</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile -->
+    <section class="profile">
+      <img class="rounded-circle profileImage" src="assects/style/image/profileImage.jpg" alt="Profile">
+      <h2>Rifki Ardiansyah Suhendi</h2>
+      <h4>Backend Developer</h4>
+    </section>
+
+    <!-- Biodata -->
+    <section id="biodata" class="BIODATA text-center">
+      <h1>BIODATA</h1>
+      <div class="row mt-4">
+        <div class="col-md-4">Nama saya Rifki, saya adalah seorang Mahasiswa itenas yang memiliki ketertarikan di bidang teknologi dan otomasi.</div>
+        <div class="col-md-4">
+          <p>Started on</p>
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Pendidikan SD</button>
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content text-dark">
+                <div class="modal-header">
+                  <h5 class="modal-title">SDN Bojong Soang</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">Juara kelas</div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Finished on</p>
+        </div>
+        <div class="col-md-4">Saya suka belajar hal-hal baru dan mengeksplorasi dunia IT, terutama dalam hal backend dan Internet of Things (IoT).</div>
+      </div>
+    </section>
+
+    <!-- Project -->
+    <section id="projects" class="projects text-center">
+      <h1>Project</h1>
+      <div class="row mt-4 justify-content-center">
+        <div class="col-md-5 mb-3">
+          <div class="card p-3">
+            <h5>Pembuatan Pengantar IoT</h5>
+            <p>Membuat sistem sederhana menggunakan sensor dan mikrokontroler yang terhubung ke internet.</p>
+          </div>
+        </div>
+        <div class="col-md-5 mb-3">
+          <div class="card p-3">
+            <h5>Pemrograman Web</h5>
+            <p>Mengembangkan website dengan HTML, CSS, JavaScript dan framework seperti Laravel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact text-center">
+      <h1>Contact</h1>
+      <form class="mt-4 mx-auto" style="max-width: 500px;">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Nama">
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Pesan"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim</button>
+      </form>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
